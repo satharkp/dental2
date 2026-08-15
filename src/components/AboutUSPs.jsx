@@ -39,21 +39,21 @@ const About = () => {
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-14 items-center">
 
           {/* Left: Image Stack */}
           <div className="relative">
-            <div className="relative grid grid-cols-2 gap-4">
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4">
               <img
                 src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=500&h=600"
                 alt="Dental clinic operatory"
-                className="rounded-lg shadow-lg object-cover w-full h-64 sm:h-80 border border-slate-200"
+                className="rounded-lg shadow-lg object-cover w-full h-56 sm:h-80 border border-slate-200"
               />
               <div className="flex flex-col gap-4">
                 <img
                   src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=400&h=280"
                   alt="Dentist with patient"
-                  className="rounded-lg shadow-lg object-cover w-full h-36 sm:h-44 border border-slate-200"
+                  className="rounded-lg shadow-lg object-cover w-full h-40 sm:h-44 border border-slate-200"
                 />
                 <div
                   className="rounded-lg p-5 flex flex-col items-center justify-center text-center shadow-sm border border-blue-100 bg-blue-50"
@@ -65,9 +65,9 @@ const About = () => {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute -bottom-4 left-8 bg-white rounded-lg shadow-lg px-5 py-3 border border-slate-200 flex items-center gap-3">
+            <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-4 sm:left-8 bg-white rounded-lg shadow-lg px-5 py-3 border border-slate-200 flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center">
-                <Shield className="w-5 h-5 text-blue-600" />
+                <Shield className="w-5 h-5 text-blue-500" />
               </div>
               <div>
                 <p className="text-xs font-extrabold text-slate-800">ISO & JCI Accredited</p>

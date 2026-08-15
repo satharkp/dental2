@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/AboutUSPs';
 import Doctors from './components/Doctors';
+import Feedback from './components/Feedback';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
@@ -18,6 +19,7 @@ function App() {
       <Services onBookClick={() => setBookingOpen(true)} />
       <About />
       <Doctors onBookClick={() => setBookingOpen(true)} />
+      <Feedback />
       <Contact />
       <Footer onBookClick={() => setBookingOpen(true)} />
       <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />

@@ -7,6 +7,7 @@ const Footer = ({ onBookClick }) => {
     { label: 'Services', href: '#services' },
     { label: 'About Us', href: '#about' },
     { label: 'Our Doctors', href: '#doctors' },
+    { label: 'Feedback', href: '#feedback' },
     { label: 'Contact Us', href: '#contact' },
   ];
 
@@ -125,13 +126,11 @@ const Footer = ({ onBookClick }) => {
         </div>
 
         {/* Divider + Bottom Bar */}
-        <div className="border-t border-slate-200 mt-12 pt-7 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="border-t border-slate-200 mt-12 pt-7 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center md:text-left">
           <p>© {new Date().getFullYear()} SmartDental Clinic. All rights reserved.</p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
             <a href="#" className="hover:text-blue-500">Privacy Policy</a>
-            <span>•</span>
             <a href="#" className="hover:text-blue-500">Terms of Service</a>
-            <span>•</span>
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="hover:text-blue-500 transition-colors font-semibold"

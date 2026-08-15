@@ -24,16 +24,16 @@ const BookingModal = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-3 sm:p-4 overflow-y-auto">
       {/* Backdrop */}
       <div className="fixed inset-0 bg-slate-950/55 backdrop-blur-sm" onClick={handleClose} />
 
       {/* Modal */}
-      <div className="relative w-full max-w-md bg-white rounded-lg shadow-2xl overflow-hidden z-10 my-8 border border-slate-200">
+      <div className="relative w-full max-w-md bg-white rounded-lg shadow-2xl overflow-hidden z-10 my-4 sm:my-8 border border-slate-200">
 
         <div className="h-1.5 w-full bg-blue-200" />
 
-        <div className="p-7">
+        <div className="p-5 sm:p-7">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <div>
@@ -57,17 +57,17 @@ const BookingModal = ({ isOpen, onClose }) => {
               </div>
               <h4 className="text-lg font-bold text-slate-800">Appointment Confirmed!</h4>
               <div className="bg-slate-50 rounded-lg p-4 text-left text-xs space-y-2 border border-slate-200">
-                <div className="flex justify-between"><span className="text-slate-400">Patient</span><span className="font-semibold text-slate-700">{form.name}</span></div>
-                <div className="flex justify-between"><span className="text-slate-400">Doctor</span><span className="font-semibold text-blue-600">{form.doctor}</span></div>
-                <div className="flex justify-between"><span className="text-slate-400">Service</span><span className="font-semibold text-slate-700">{form.service}</span></div>
-                <div className="flex justify-between"><span className="text-slate-400">Date & Time</span><span className="font-semibold text-slate-700">{form.date || 'TBD'} • {form.time}</span></div>
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-0.5"><span className="text-slate-400">Patient</span><span className="font-semibold text-slate-700 break-words">{form.name}</span></div>
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-0.5"><span className="text-slate-400">Doctor</span><span className="font-semibold text-blue-600 break-words">{form.doctor}</span></div>
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-0.5"><span className="text-slate-400">Service</span><span className="font-semibold text-slate-700 break-words">{form.service}</span></div>
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-0.5"><span className="text-slate-400">Date & Time</span><span className="font-semibold text-slate-700 break-words">{form.date || 'TBD'} • {form.time}</span></div>
               </div>
               <p className="text-xs text-slate-400">A confirmation SMS & email has been sent to you.</p>
               <button onClick={handleClose} className="btn-primary text-sm">Done</button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[11px] font-bold text-slate-400 uppercase tracking-wide mb-1">Service</label>
                   <select
@@ -98,7 +98,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[11px] font-bold text-slate-400 uppercase tracking-wide mb-1">Date</label>
                   <input
@@ -136,7 +136,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[11px] font-bold text-slate-400 uppercase tracking-wide mb-1">Phone</label>
                   <input
