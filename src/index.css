@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8fbff;
+    color: #122033;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Utility: clinical blue accent underline separator */
+.section-divider {
+  width: 48px;
+  height: 3px;
+  background: #93c5fd;
+  border-radius: 9999px;
+  margin: 1rem auto 1.5rem;
+}
+
+/* Card hover effect */
+.service-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -24px rgba(15, 23, 42, 0.35);
+  border-color: rgba(147, 197, 253, 0.75);
+}
+
+.doctor-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.doctor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -28px rgba(15, 23, 42, 0.42);
+  border-color: rgba(147, 197, 253, 0.65);
+}
+.doctor-card:hover img {
+  transform: scale(1.02);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #eef3f4; }
+::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #60a5fa; }
+
+/* Nav underline animation */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #60a5fa;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Icon wrapper */
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bfdbfe;
+  transition: background 0.3s, color 0.3s;
+}
+.service-card:hover .icon-box {
+  background: #60a5fa;
+  color: white;
+  border-color: #60a5fa;
+}
+
+/* USP card */
+.usp-card {
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.usp-card:hover {
+  box-shadow: 0 14px 34px -26px rgba(15, 23, 42, 0.36);
+  transform: translateY(-2px);
+}
+
+/* Hero badge */
+.hero-badge {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #3b82f6;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 1rem;
+  border-radius: 8px;
+}
+
+/* Stat card highlight */
+.stat-pill {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 0.875rem 1.25rem;
+}
+
+/* Button primary */
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.75rem 1.75rem;
+  transition: all 0.2s;
+  box-shadow: 0 10px 20px -18px rgba(59, 130, 246, 0.55);
+}
+.btn-primary:hover {
+  background: #60a5fa;
+  box-shadow: 0 12px 24px -18px rgba(59, 130, 246, 0.6);
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
